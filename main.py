@@ -9,6 +9,8 @@ modules = {
     'core': '../incicle/core/core-backend'
 }
 
-route = Route.treatingTheFile(modules['social-network'], 'social-network')
+routeSocialMedia = Route.treatingTheFile(modules['social-network'], 'social-network')
+routeCore = Route.treatingTheFile(modules['core'], 'core')
 
-print(route.creatingRouteFile())
+routeSocialMedia.creatingRouteFile()
+routeCore.creatingRouteFile()

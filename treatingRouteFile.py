@@ -10,8 +10,9 @@ class treatingTheFile:
     def creatingRouteFile(self):
         currentPath = os.getcwd() + '/'
         os.chdir(self.path)
-        
-        return os.system('adonis route:list > {}'.format(currentPath + self.module + '.txt'))
+        os.system('adonis route:list > {}'.format(currentPath + self.module + '.txt'))
+
+        return os.chdir(currentPath)
 
     def getRoutes(self):
         pass
