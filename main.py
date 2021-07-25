@@ -1,6 +1,7 @@
 import os
 import re
 import openpyxl
+import treatingRouteFile as Route
 
 
 modules = {
@@ -8,4 +9,6 @@ modules = {
     'core': '../incicle/core/core-backend'
 }
 
-print(modules['social-network'])
+route = Route.treatingTheFile(modules['social-network'], 'social-network')
+
+print(route.creatingRouteFile())
